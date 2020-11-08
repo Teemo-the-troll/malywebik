@@ -1,0 +1,10 @@
+<nav>
+  <ul class="navlist">
+    <li *ngIf="showHome" class="navbutton"><a class="navlink" [ngClass]="{'active':active==='home'}" id="active" (click)="goHome()">Home</a></li>
+    <li *ngIf="showContacts" class="navbutton"><a class="navlink" [ngClass]="{'active':active==='contact'}" (click)="goContact()">Contact</a></li>
+    <li *ngIf="showAbout" class="navbutton"><a class="navlink" [ngClass]="{'active':active==='about'}" (click)="goAbout()">About</a></li>
+    <li class="navbutton" id="search"><input type="text"  [(ngModel)]="search" (input)="updateSearch()"></li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>
+<footer> ©Mikulas kopecky</footer>
