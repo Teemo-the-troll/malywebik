@@ -1,37 +1,10 @@
-nav {
+
+
+app-sidebar {
+  z-index: 9999;
+  position: absolute;
   width: 100%;
-}
-
-.navlist {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-.navbutton {
-  float: left;
-}
-
-.navlink {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 0.7rem 1.2rem;
-  text-decoration: none;
-}
-
-.navlink:hover:not(.active) {
-  background-color: #111;
-}
-
-.active {
-  background-color: #4CAF50;
-}
-
-#search {
-  padding-top: 0.6rem;
+  height: 100%;
 }
 
 

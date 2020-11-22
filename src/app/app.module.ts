@@ -7,13 +7,17 @@ import { AboutComponent } from './about/about.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { HomeComponent } from './home/home.component';
 import {FormsModule} from '@angular/forms';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
     ContactsComponent,
-    HomeComponent
+    HomeComponent,
+    SidebarComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

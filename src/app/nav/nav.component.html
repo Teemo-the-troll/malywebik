@@ -1,0 +1,7 @@
+<ul class="navlist">
+  <li class="navbutton" id="hamburger"><a (click)="sideUpdate()"><i class="fas fa-bars"></i></a> </li>
+  <li *ngIf="showHome" class="navbutton"><a class="navlink" [ngClass]="{'active':active==='home'}" id="active" (click)="goHome()">Home</a></li>
+  <li *ngIf="showContacts" class="navbutton"><a class="navlink" [ngClass]="{'active':active==='contact'}" (click)="goContact()">Contact</a></li>
+  <li *ngIf="showAbout" class="navbutton"><a class="navlink" [ngClass]="{'active':active==='about'}" (click)="goAbout()">About</a></li>
+  <li class="navbutton" id="search"><input type="text"  [(ngModel)]="search" (input)="updateSearch()"></li>
+</ul>
