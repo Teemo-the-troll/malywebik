@@ -11,6 +11,8 @@ export class NavComponent implements OnInit {
   showHome = true;
   showAbout = true;
   showContacts = true;
+  showUsercreate = true;
+  showUseredit = true;
   active = 'home';
 
   @Output() clickedHam: EventEmitter<string> = new EventEmitter();
@@ -26,13 +28,20 @@ export class NavComponent implements OnInit {
       this.showHome = true;
       this.showAbout = true;
       this.showContacts = true;
+      this.showUsercreate = true;
     } else {
       this.showHome = 'home'.includes(this.search.toLowerCase());
       this.showAbout = 'about'.includes(this.search.toLowerCase());
       this.showContacts = 'contacts'.includes(this.search.toLowerCase());
+      this.showUsercreate = 'create user'.includes(this.search.toLowerCase());
+      this.showUseredit = 'edit user'.includes(this.search.toLowerCase());
     }
   }
 
+  goUseredit(){
+    this.router.navigateByUrl('/useredit')
+    this.active = 'useredit'
+  }
   goHome(){
     this.router.navigateByUrl('');
     this.active = 'home';
@@ -41,6 +50,11 @@ export class NavComponent implements OnInit {
   goContact(){
     this.router.navigateByUrl('/contact');
     this.active = 'contact';
+  }
+
+  goUsercreate(){
+    this.router.navigateByUrl('/usercreate');
+    this.active = 'usercreate';
   }
 
   goAbout(){

@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import {FormsModule} from '@angular/forms';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { NavComponent } from './nav/nav.component';
+import { UserCreateComponent } from './user-create/user-create.component';
+import { DetailComponent } from './detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,14 @@ import { NavComponent } from './nav/nav.component';
     ContactsComponent,
     HomeComponent,
     SidebarComponent,
-    NavComponent
+    NavComponent,
+    UserCreateComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FormsModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
