@@ -6,7 +6,7 @@
   <tbody>
     <tr *ngFor="let user of this.getUsers()">
       <td>{{user.id}}</td>
-      <td>{{user.username}}</td>
+      <td>{{user.username | shorten:6:'...'}}</td>
     </tr>
   </tbody>
 </table>

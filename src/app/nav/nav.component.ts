@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {Router} from '@angular/router';
+import {UserService} from '../user.service';
 
 @Component({
   selector: 'app-nav',
@@ -17,11 +18,12 @@ export class NavComponent implements OnInit {
 
   @Output() clickedHam: EventEmitter<string> = new EventEmitter();
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private userService: UserService) { }
 
   sideUpdate(){
     this.clickedHam.emit(null);
   }
+
 
   updateSearch(){
     if (this.search === ''){
@@ -39,11 +41,12 @@ export class NavComponent implements OnInit {
   }
 
   goUseredit(){
-    this.router.navigateByUrl('/useredit')
-    this.active = 'useredit'
+    this.router.navigateByUrl('/useredit');
+    this.active = 'useredit';
   }
   goHome(){
     this.router.navigateByUrl('');
+    this.userService.updateUsers();
     this.active = 'home';
   }
 

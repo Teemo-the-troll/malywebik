@@ -11,6 +11,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { NavComponent } from './nav/nav.component';
 import { UserCreateComponent } from './user-create/user-create.component';
 import { DetailComponent } from './detail/detail.component';
+import { HttpClientModule} from '@angular/common/http';
+import { ShortenPipe } from './shorten.pipe';
 
 @NgModule({
   declarations: [
@@ -21,12 +23,14 @@ import { DetailComponent } from './detail/detail.component';
     SidebarComponent,
     NavComponent,
     UserCreateComponent,
-    DetailComponent
+    DetailComponent,
+    ShortenPipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
